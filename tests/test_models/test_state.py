@@ -33,7 +33,7 @@ class TestState(unittest.TestCase):
             os.remove(FileStorage._FileStorage__file_path)
 
     def test_8_instantiation(self):
-        """Tests instantiation of State class."""
+        """Checks instantiation of State class."""
 
         b = State()
         self.assertEqual(str(type(b)), "<class 'models.state.State'>")
@@ -41,7 +41,7 @@ class TestState(unittest.TestCase):
         self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of State class."""
+        """Checks the attributes of State class."""
         attributes = storage.attributes()["State"]
         o = State()
         for k, v in attributes.items():

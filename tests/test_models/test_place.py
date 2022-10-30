@@ -33,7 +33,7 @@ class TestPlace(unittest.TestCase):
             os.remove(FileStorage._FileStorage__file_path)
 
     def test_8_instantiation(self):
-        """Tests instantiation of Place class."""
+        """Checks instantiation of Place class."""
 
         b = Place()
         self.assertEqual(str(type(b)), "<class 'models.place.Place'>")
@@ -41,7 +41,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of Place class."""
+        """Checks the attributes of Place class."""
         attributes = storage.attributes()["Place"]
         o = Place()
         for k, v in attributes.items():

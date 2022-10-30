@@ -56,7 +56,7 @@ class TestBaseModel(unittest.TestCase):
         b = BaseModel(*args)
 
     def test_3_attributes(self):
-        """Tests attributes value for instance of a BaseModel class."""
+        """Checks attributes value for instance of a BaseModel class."""
 
         attributes = storage.attributes()["BaseModel"]
         o = BaseModel()
@@ -74,7 +74,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(abs(diff.total_seconds()) < 0.1)
 
     def test_3_id(self):
-        """Tests for unique user ids."""
+        """Checks for unique user ids."""
 
         l = [BaseModel().id for i in range(1000)]
         self.assertEqual(len(set(l)), len(l))
@@ -136,7 +136,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(str(e.exception), msg)
 
     def test_4_instantiation(self):
-        """Tests instantiation with **kwargs."""
+        """Checks instantiation with **kwargs."""
 
         my_model = BaseModel()
         my_model.name = "Holberton"

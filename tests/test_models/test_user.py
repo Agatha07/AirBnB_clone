@@ -41,7 +41,7 @@ class TestUser(unittest.TestCase):
         self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_8_attributes(self):
-        """Tests the attributes of User class."""
+        """Checks the attributes of User class."""
         attributes = storage.attributes()["User"]
         o = User()
         for k, v in attributes.items():
